@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="My WDD231 project homepage" />
+  <meta name="author" content="Sekirangi Edward" />
+  <title>Home - WDD231</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/chamber.css" />
+  <!-- JavaScript (using defer) -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/course.js" defer></script>
+</head>
+<body>
+  <header class="index-header">
+    <!-- Small photo and your name -->
+    <img src="images/profile.webp" alt="Your Photo" width="100" />
+    <span class="the-name">Sekirangi Edward</span>
+    <!-- Responsive Navigation -->
+    <nav class="index-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="https://github.com/your-github-username" target="_blank">GitHub Profile</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home heading -->
+    <h1>Home</h1>
+    <!-- About Section -->
+    <section>
+      <h2>About Me</h2>
+      <p>Some content about yourself goes here.</p>
+    </section>
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+      <p>Details about your projects go here.</p>
+    </section>
+    <!-- Courses Section -->
+    <section>
+      <h2>Courses</h2>
+      <!-- Dynamic course cards will be generated here -->
+      <div id="courseCards"></div>
+      <!-- Course Filter Buttons -->
+      <div id="courseFilters">
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+      </div>
+      <!-- Display total credits dynamically -->
+      <div id="totalCredits">
+        Total Credits: <span id="credits"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Your Name, Your State or Country</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

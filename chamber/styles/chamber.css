@@ -1,0 +1,138 @@
+/* We are setting everything to 0 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Winky Sans", sans-serif;
+    color:#d9d9d9;
+}
+/* The header */
+header {
+    display: grid;
+    grid-template-columns: 4fr 3fr 2fr;
+    align-items: center;
+    background-color: #000000;
+    padding: 1rem;
+    gap: 1rem;
+} 
+/* header styling on index page */
+.index-header {
+    display: grid;
+    grid-template-columns: .5fr 1fr 6fr;
+    align-items: center;
+    background-color: #000000;
+}
+.the-name{
+    font-size: 2rem;
+    font-family: "DM Serif Text", serif;
+}
+
+/* Logo styling chamber*/
+.logo{
+    display: flex;
+    
+}
+.logo h1 {
+    margin: 0;
+    font-family: "DM Serif Text", serif;
+    color:#d9d9d9;
+    padding: 1rem;
+}
+
+/* Navigation styling using CSS Grid */
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: end;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #d9d9d9;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  padding: 1rem;
+}
+
+nav a:hover {
+  color: #FF0000;
+}
+
+.hero {
+    width:100vw;
+    height:auto; 
+    overflow: hidden; 
+}
+  
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+/* Index page!!!!!!!!!!!!!!*/
+
+  /* Navigation Styles */
+.index-nav ul {
+    /* background-color: red; */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 6rem;
+    font-size: 2rem;
+}
+  
+.index-nav ul li {
+    margin-right: 1em;
+    padding:5px;
+} 
+  
+.index-nav ul li a {
+    text-decoration: none;
+    
+  }
+  
+  /* Course Card Styles */
+.course-card {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em 0;
+}
+  
+.course-card.completed {
+    background-color: #e0ffe0; /* Light green for completed courses */
+}
+  
+  /* Responsive Navigation */
+.nav-toggle {
+    display: none;
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+}
+  
+@media (max-width: 600px) {
+    .nav-toggle {
+      display: block;
+    }
+    nav ul {
+      flex-direction: column;
+      display: none;
+    }
+    nav.active ul {
+      display: flex;
+    }
+  }
+  
+  
+footer {
+    background-color: #000000;
+    padding: 1em;
+}
+  
