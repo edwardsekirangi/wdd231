@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Winky Sans", sans-serif;
-    color:#d9d9d9;
+    color:#313030;
 }
 /* The header */
 header {
@@ -11,19 +11,27 @@ header {
     grid-template-columns: 4fr 3fr 2fr;
     align-items: center;
     background-color: #000000;
+    color:#d9d9d9;
     padding: 1rem;
     gap: 1rem;
 } 
 /* header styling on index page */
 .index-header {
     display: grid;
-    grid-template-columns: .5fr 1fr 6fr;
+    grid-template-columns: .5fr 6fr;
     align-items: center;
     background-color: #000000;
 }
 .the-name{
     font-size: 2rem;
     font-family: "DM Serif Text", serif;
+    color:#d9d9d9;
+    margin-left: 20px;
+}
+.eading{
+    background-color: #d6d6d6;
+    text-align: center;
+    margin-top: 0;
 }
 
 /* Logo styling chamber*/
@@ -100,11 +108,7 @@ nav a:hover {
 .course-card {
     border: 1px solid #ccc;
     padding: 1em;
-    margin: 1em 0;
-}
-  
-.course-card.completed {
-    background-color: #e0ffe0; /* Light green for completed courses */
+    
 }
   
   /* Responsive Navigation */
@@ -116,23 +120,72 @@ nav a:hover {
     padding: 0.5em;
     cursor: pointer;
 }
-  
-@media (max-width: 600px) {
-    .nav-toggle {
-      display: block;
-    }
-    nav ul {
-      flex-direction: column;
-      display: none;
-    }
-    nav.active ul {
-      display: flex;
-    }
-  }
-  
-  
-footer {
-    background-color: #000000;
-    padding: 1em;
+.grid-img{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
+.grid-img h2{
+    padding: .5rem;
+    border: 1px solid rgb(0 0 0/ 0.4);
+    width: 383px;
+    text-align: center;
+    background-color: #d6d6d6;
+    border-radius: 10px 10px 0 0;
+}
+
+.section-div{
+    display:grid;
+    grid-template-columns: 2fr 1.5fr ;
+    
+}
+.section-des{
+    order: -1;
+    margin-top: 34px;
+}
+
+
+footer {
+    background-color: black;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.small-name{
+    color: white;
+}
+
+/* Code for the hamburger menus */
+
+.hamburger{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #000000;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+    
+
   
+  
+

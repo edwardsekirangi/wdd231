@@ -21,8 +21,11 @@
     <!-- Normalize css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/chamber.css">
-    <title>Chamber page Directory</title>
-    <title>Document</title>
+    <!-- JavaScript (using defer) -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="js/course.js" defer></script>
+    <title>Chamber Page Directory</title>
 </head>
 <body>
     <header>
@@ -30,21 +33,21 @@
             <img src="images/favicon.png" alt="Logo" width="100">
             <h1>UG Commerce</h1>
         </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#directory">Directory</a></li>
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#directory">Directory</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">&#9776;</div>
         </nav>
     </header>
     <main>
         <div class="hero">
             <img src="images/business.jpg" alt="business">
         </div>
-
         <section>
             <h1>Home</h1>
             <table>
@@ -56,13 +59,11 @@
                     </tr>
                 </thead>
             </table>
-            
         </section>
-
     </main>
     <footer>
-
+        <p>&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
+        <p id="lastModified"></p>   
     </footer>
-    
 </body>
 </html>

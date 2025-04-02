@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="My WDD231 project homepage" />
+  <meta name="description" content="Home Page Commerce" />
   <meta name="author" content="Sekirangi Edward" />
-  <title>Home - WDD231</title>
+  <title>Home Commerce</title>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,49 +14,56 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles/chamber.css" />
   <!-- JavaScript (using defer) -->
-  <script src="js/navigation.js" defer></script>
-  <script src="js/date.js" defer></script>
-  <script src="js/course.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
-  <header class="index-header">
-    <!-- Small photo and your name -->
-    <img src="images/profile.webp" alt="Your Photo" width="100" />
-    <span class="the-name">Sekirangi Edward</span>
-    <!-- Responsive Navigation -->
-    <nav class="index-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="chamber.html">Chamber</a></li>
-        <li><a href="https://github.com/your-github-username" target="_blank">GitHub Profile</a></li>
-        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="index-header">
+            <img src="images/profile.webp" alt="Logo" width="100">
+            <span class="the-name">Sekirangi Edward</span>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="#directory">Directory</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </nav>
+    </header>
 
   <main>
     <!-- Home heading -->
-    <h1>Home</h1>
+    <h1 class="eading">Home</h1>
     <!-- About Section -->
-    <section>
-      <h2>About Me</h2>
-      <p>Some content about yourself goes here.</p>
-    </section>
-    <!-- Projects Section -->
-    <section>
-      <h2>Projects</h2>
-      <p>Details about your projects go here.</p>
-    </section>
+     <h2>Courses</h2>
+     <div class="section-div">
+        <section class="grid-img">
+            <h2>Murchison Falls, Uganda</h2>
+            <img src="images/Reasons-To-Visit-Uganda.jpg" alt="reasons to come to ug" width="400">
+        </section>
+          <!-- Projects Section -->
+        <section id="courses">
+            <h2>Projects</h2>
+            <p>Details about the project go here.</p>
+        </section>
+     </div>
+    
     <!-- Courses Section -->
     <section>
       <h2>Courses</h2>
       <!-- Dynamic course cards will be generated here -->
+
       <div id="courseCards"></div>
       <!-- Course Filter Buttons -->
       <div id="courseFilters">
-        <button id="all">All Courses</button>
-        <button id="wdd">WDD Courses</button>
-        <button id="cse">CSE Courses</button>
+        <button id="all-btn">All Courses</button>
+        <button id="wdd-btn">WDD Courses</button>
+        <button id="cse-btn">CSE Courses</button>
       </div>
       <!-- Display total credits dynamically -->
       <div id="totalCredits">
@@ -66,8 +73,10 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Your Name, Your State or Country</p>
+    
+    <p class="small-name">&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
     <p id="lastModified"></p>
+    
   </footer>
 </body>
 </html>
