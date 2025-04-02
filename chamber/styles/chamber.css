@@ -102,7 +102,13 @@ nav a:hover {
 .index-nav ul li a {
     text-decoration: none;
     
-  }
+}
+
+#course-heading{
+    text-align: end;
+    text-align: center;
+    margin-left: 50%;
+}
   
   /* Course Card Styles */
 .course-card {
@@ -136,7 +142,7 @@ nav a:hover {
 
 .section-div{
     display:grid;
-    grid-template-columns: 2fr 1.5fr ;
+    grid-template-columns: 1fr 1.5fr ;
     
 }
 .section-des{
