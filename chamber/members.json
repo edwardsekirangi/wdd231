@@ -3,8 +3,8 @@
         "name": "Sahara Textiles",
         "address": "123 Desert Lane, Timbuktu",
         "phone": "+223 123 456 789",
-        "website": "https://saharatextiles.com",
-        "image": "sahara.png",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo1.jpg",
         "membership": 3,
         "description": "Leading supplier of traditional and modern textiles across West Africa."
     },
@@ -12,8 +12,8 @@
         "name": "Oasis Caf\u00e9",
         "address": "456 Market Street, Timbuktu",
         "phone": "+223 987 654 321",
-        "website": "https://oasiscafe.tmb",
-        "image": "oasis_cafe.jpg",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo2.jpg",
         "membership": 1,
         "description": "A cozy caf\u00e9 known for local dishes and excellent coffee."
     },
@@ -21,8 +21,8 @@
         "name": "Tuareg Tours",
         "address": "789 Explorer Ave, Timbuktu",
         "phone": "+223 321 654 987",
-        "website": "https://tuaregtours.travel",
-        "image": "tuareg_tours.png",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo3.jpg",
         "membership": 2,
         "description": "Offering authentic desert adventure tours with experienced local guides."
     },
@@ -30,8 +30,8 @@
         "name": "Sandy Tech Solutions",
         "address": "101 Innovation Rd, Timbuktu",
         "phone": "+223 555 123 999",
-        "website": "https://sandytech.tmb",
-        "image": "sandytech_logo.svg",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo4.jpg",
         "membership": 3,
         "description": "Specialists in solar energy and sustainable tech for Sahelian communities."
     },
@@ -39,8 +39,8 @@
         "name": "Desert Arts Collective",
         "address": "202 Artisan Way, Timbuktu",
         "phone": "+223 678 123 456",
-        "website": "https://desertarts.org",
-        "image": "desert_arts.png",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo5.jpg",
         "membership": 2,
         "description": "A nonprofit promoting local artists and cultural heritage."
     },
@@ -48,8 +48,8 @@
         "name": "Nomad Gear Co.",
         "address": "303 Adventure Blvd, Timbuktu",
         "phone": "+223 777 888 999",
-        "website": "https://nomadgear.co",
-        "image": "nomadgear.jpg",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo6.jpg",
         "membership": 1,
         "description": "Outdoor and camping equipment for nomads, travelers, and explorers."
     },
@@ -57,8 +57,8 @@
         "name": "Blue Dune Finance",
         "address": "404 Capital Crescent, Timbuktu",
         "phone": "+223 444 555 666",
-        "website": "https://bluedunefinance.tmb",
-        "image": "bluedune_logo.png",
+        "website": "https://www.churchofjesuschrist.org/?lang=eng",
+        "image": "../images/logo7.jpg",
         "membership": 3,
         "description": "Financial services firm helping small businesses thrive in the region."
     }
