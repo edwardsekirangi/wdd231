@@ -24,10 +24,14 @@ async function fetchMembers() {
 //We will now create a function called display members that will display the members
 const displayMembers = (members) => {
     //Create a for loop to iterate through the items
+    membersContainer.innerHTML = ''; // Clear previous content
+
     members.forEach((member) => {
         //We are now most likely gonna start adding elements to add into the HTML file here in the div element
-        card.classList.add("member-card");
-
+       
+        const card = document.createElement("div");
+        card.classList.add("member-card"); // Add class to card
+        
         //Add member details to the card
         card.innerHTML = `
         <img src="images/${member.image}" alt="${member.name} logo" />
@@ -54,6 +58,6 @@ gridBtn.addEventListener("click", () => {
     membersContainer.classList.add("list-view");
   });
 
-  
+
 //A call to the function here at the bottom
 fetchMembers();
