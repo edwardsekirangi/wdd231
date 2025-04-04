@@ -24,7 +24,7 @@
     <!-- JavaScript (using defer) -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="js/course.js" defer></script>
+    <script src="scripts/members.js" defer></script>
     <title>Chamber Page Directory</title>
 </head>
 <body>
@@ -37,11 +37,11 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#directory">Directory</a></li>
+                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
                 <li><a href="#membership">Membership</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="hamburger" id="hamburger"></div>
         </nav>
     </header>
     <main>
@@ -49,20 +49,20 @@
             <img src="images/business.jpg" alt="business">
         </div>
         <section>
-            <h1>Home</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>City</th>
-                    </tr>
-                </thead>
-            </table>
+            <h2>Home</h2>
+            <div class="view-toggle">
+                <button id="grid-view">Grid View</button>
+                <button id="list-view">List View</button>
+            
+                <!-- This is the element that will be populated by our javascript -->
+                <div id="members-container" class="grid-view"></div>
+                <!-- First row: Headings -->
+            </div>
+            
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
+        <p class="small-name">&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
         <p id="lastModified"></p>   
     </footer>
 </body>

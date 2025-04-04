@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Home Page Commerce" />
-  <meta name="author" content="Sekirangi Edward" />
-  <title>Home Commerce</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Home Page Commerce" />
+    <meta name="author" content="Sekirangi Edward" />
+
+  <!-- Meta and facebook debugging -->
+    <meta property="og:title" content="Home Page Chamber of Commerce - Official Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://edwardsekirangi.github.io/wdd231/chamber/images">
+    <meta property="og:url" content="https://edwardsekirangi.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Welcome to the official website of Your Chamber of Commerce. Stay updated with events, news, and local business resources.">
+    <meta property="og:site_name" content="Your Chamber of Commerce">
+    <title>Home Commerce</title>
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles/chamber.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/chamber.css" />
   <!-- JavaScript (using defer) -->
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/course.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,13 +34,13 @@
         </div>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="#directory">Directory</a></li>
+                <li class="current-menu-item"><a href="index.html">Home</a></li>
+                <li><a href="placeholder">Events</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#membership">Membership</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="hamburger" id="hamburger"></div>
         </nav>
     </header>
 
@@ -40,7 +48,7 @@
     <!-- Home heading -->
     <h1 class="eading">Home</h1>
     <!-- About Section -->
-     <h2 id="course-heading">Courses</h2>
+    
      <div class="section-div">
         <section class="grid-img">
             <h2>Murchison Falls, Uganda</h2>

@@ -1,20 +1,22 @@
 /* We are setting everything to 0 */
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Winky Sans", sans-serif;
-    color:#313030;
+    color: #313030;
 }
+
 /* The header */
 header {
     display: grid;
     grid-template-columns: 4fr 3fr 2fr;
     align-items: center;
     background-color: #000000;
-    color:#d9d9d9;
+    color: #d9d9d9;
     padding: 1rem;
     gap: 1rem;
-} 
+}
+
 /* header styling on index page */
 .index-header {
     display: grid;
@@ -22,68 +24,72 @@ header {
     align-items: center;
     background-color: #000000;
 }
-.the-name{
+
+.the-name {
     font-size: 2rem;
     font-family: "DM Serif Text", serif;
-    color:#d9d9d9;
+    color: #d9d9d9;
     margin-left: 20px;
 }
-.eading{
+
+.eading {
     background-color: #d6d6d6;
     text-align: center;
     margin-top: 0;
 }
 
 /* Logo styling chamber*/
-.logo{
+.logo {
     display: flex;
-    
+
 }
+
 .logo h1 {
     margin: 0;
     font-family: "DM Serif Text", serif;
-    color:#d9d9d9;
+    color: #d9d9d9;
     padding: 1rem;
 }
 
 /* Navigation styling using CSS Grid */
 nav ul {
-  list-style: none;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  justify-content: end;
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: end;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #d9d9d9;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-  padding: 1rem;
+    text-decoration: none;
+    color: #d9d9d9;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    padding: 1rem;
 }
 
 nav a:hover {
-  color: #FF0000;
+    color: #FF0000;
 }
 
 .hero {
-    width:100vw;
-    height:auto; 
-    overflow: hidden; 
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
 }
-  
+
 .hero img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensures the image covers the area without stretching */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
 }
 
 /* Index page!!!!!!!!!!!!!!*/
 
-  /* Navigation Styles */
+/* Navigation Styles */
 .index-nav ul {
     /* background-color: red; */
     list-style: none;
@@ -93,45 +99,39 @@ nav a:hover {
     margin-left: 6rem;
     font-size: 2rem;
 }
-  
+
 .index-nav ul li {
     margin-right: 1em;
-    padding:5px;
-} 
-  
-.index-nav ul li a {
-    text-decoration: none;
-    
+    padding: 5px;
 }
 
-#course-heading{
+.index-nav ul li a {
+    text-decoration: none;
+
+}
+
+#course-heading {
     text-align: end;
     text-align: center;
     margin-left: 50%;
 }
-  
-  /* Course Card Styles */
+
+/* Course Card Styles */
 .course-card {
     border: 1px solid #ccc;
     padding: 1em;
-    
+
 }
-  
-  /* Responsive Navigation */
-.nav-toggle {
-    display: none;
-    background: #444;
-    color: #fff;
-    border: none;
-    padding: 0.5em;
-    cursor: pointer;
-}
-.grid-img{
+
+/* Responsive Navigation */
+
+.grid-img {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
-.grid-img h2{
+
+.grid-img h2 {
     padding: .5rem;
     border: 1px solid rgb(0 0 0/ 0.4);
     width: 383px;
@@ -140,12 +140,13 @@ nav a:hover {
     border-radius: 10px 10px 0 0;
 }
 
-.section-div{
-    display:grid;
-    grid-template-columns: 1fr 1.5fr ;
-    
+.section-div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
 }
-.section-des{
+
+.section-des {
     order: -1;
     margin-top: 34px;
 }
@@ -158,16 +159,22 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-.small-name{
+
+.small-name {
     color: white;
+}
+
+ul .current-menu-item {
+    background-color: rgb(32, 31, 31);
 }
 
 /* Code for the hamburger menus */
 
-.hamburger{
+.hamburger {
     display: none;
     font-size: 30px;
     cursor: pointer;
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -182,16 +189,35 @@ footer {
         text-align: center;
     }
 
+    .nav-links li a {
+
+        display: block;
+    }
+
+    .section-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #courses {
+        margin-top: 1rem;
+    }
+
     .nav-links.active {
         display: flex;
     }
-
+    .hamburger::before{
+        content: "\2632";
+    }
     .hamburger {
         display: block;
     }
+    .hamburger.active::before{
+        content: "x";
+    }
+
+    ul .current-menu-item {
+        background-color: rgb(32, 31, 31); 
+    }
 }
-    
-
-  
-  
-
