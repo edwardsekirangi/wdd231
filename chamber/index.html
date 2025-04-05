@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chamber of Commerce directory page">
@@ -21,10 +21,11 @@
     <!-- Normalize css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/chamber.css">
-    <!-- JavaScript (using defer) -->
+    <!-- JavaScript (using defer) Check the tags cuz  -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/refmembers.js" defer></script>
     <title>Chamber of commerce Directory Page</title>
 </head>
 <body>
@@ -35,32 +36,57 @@
         </div>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li class="current-menu-item"><a href="chamber/index.html">Home</a></li>
                 <li><a href="#events">Events</a></li>
-                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#membership">Membership</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger"></div>
         </nav>
-    </header>
+    </header>  
     <main>
-        <div class="hero">
-            <img src="images/business.jpg" alt="business">
-        </div>
-        <section>
-            <h2 id="companies-heading">Home</h2>
-            <div class="view-toggle">
-                <button id="grid-view">Grid View</button>
-                <button id="list-view">List View</button>
-            
-                <!-- This is the element that will be populated by our javascript -->
-                <div class="members-container" class="grid-view"></div>
-                <!-- First row: Headings -->
+        <section class="hero">
+            <img src="images/ecommerce.jpg" alt="Welcome to Timbuktu" />
+            <div class="cta">
+                <a href="join.html" class="btn">Join the Chamber</a>
             </div>
-            
         </section>
-    </main>
+
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <article class="event">
+                <h3>New Product Launch</h3>
+                <p>We are excited to introduce our latest products line. Check it out!</p>
+                <a href="#learn-more" class="event-link">Learn More</a>
+            </article>
+            <article class="event">
+                <h3>Spring Sale</h3>
+                <p>Get up to 50% off on selected items this season!</p>
+                <a href="#shop-now" class="event-link">Shop Now</a>
+            </article>
+            <article class="event">
+                <h3>Community Outreach</h3>
+                <p>Join us in giving back to the community through our charity drive.</p>
+                <a href="#get-involved" class="event-link">Get Involved</a>
+            </article>
+        </section>
+        <section class="weather-card">
+            <h2 id="name"></h2>
+            <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon">
+            <div id="temperature"></div>
+            <div id="description"></div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-cards" class="cards">
+              <!-- Populated with JavaScript -->
+            </div>
+        </section>
+    
+      
+    </main> 
     <footer>
         <p class="small-name">&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
         <p id="lastModified"></p>   

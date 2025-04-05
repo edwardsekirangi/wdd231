@@ -203,54 +203,152 @@ ul .current-menu-item {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
   
-  .view-toggle button:hover {
+.view-toggle button:hover {
     background-color: #950101;
-  }
+}
   
-  #members-container {
+#members-container {
     margin-top: 20px;
     display: grid;
     gap: 20px;
-  }
+}
   
   /* Grid view: multiple columns */
-  .grid-view {
+.grid-view {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+}
   
   /* List view: single column */
-  .list-view {
+.list-view {
     grid-template-columns: 1fr;
-  }
+}
   
-  .member-card {
+.member-card {
     background: #fff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
+}
   
-  .member-card img {
+.member-card img {
     width: 100%;
     height: 150px;
     object-fit: contain;
     margin-bottom: 10px;
-  }
+}
   
-  .member-card h2 {
+.member-card h2 {
     margin-top: 0;
-  }
+}
   
-  .member-card a {
+.member-card a {
     color: #000dff;
     text-decoration: none;
-  }
+}
   
-  .member-card a:hover {
+.member-card a:hover {
     text-decoration: underline;
-  }
+}
+
+/* Here is lies the code for the home commerce page */
+.cta {
+    padding: 1rem;
+}
+.btn:hover{
+    background-color: #6b0000;
+}
+  
+.btn {
+    background-color: #3D0000;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #d9d9d9;
+    border-radius: 8px;
+}
+
+/* Current Events*/
+.current-events {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.current-events h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.current-events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.event-link {
+    display: inline-block;
+    color: #0078D4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.event-link:hover {
+    color: #005fa3;
+}
+
+/* Weather card design */
+.weather-card{
+    background-color: rgb(244, 244, 244);
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.weather-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.weather-card #temperature {
+    font-size: 48px;
+    color: #ff5733;
+}
+.weather-card #description {
+    margin: 10px 0;
+    font-size: 18px;
+    
+}
+.weather-card img {
+    width: 100px;
+    margin: 10px auto;
+}
 
 @media screen and (max-width: 768px) {
     .nav-links {

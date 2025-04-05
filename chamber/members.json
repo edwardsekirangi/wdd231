@@ -5,7 +5,7 @@
         "phone": "+223 123 456 789",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo1.jpg",
-        "membership": 3,
+        "membership": "silver",
         "description": "Leading supplier of traditional and modern textiles across West Africa."
     },
     {
@@ -14,7 +14,7 @@
         "phone": "+223 987 654 321",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo2.jpg",
-        "membership": 1,
+        "membership": "platinum",
         "description": "A cozy caf\u00e9 known for local dishes and excellent coffee."
     },
     {
@@ -23,7 +23,7 @@
         "phone": "+223 321 654 987",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo3.jpg",
-        "membership": 2,
+        "membership": "silver",
         "description": "Offering authentic desert adventure tours with experienced local guides."
     },
     {
@@ -32,7 +32,7 @@
         "phone": "+223 555 123 999",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo4.jpg",
-        "membership": 3,
+        "membership": "silver",
         "description": "Specialists in solar energy and sustainable tech for Sahelian communities."
     },
     {
@@ -41,7 +41,7 @@
         "phone": "+223 678 123 456",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo5.jpg",
-        "membership": 2,
+        "membership": "gold",
         "description": "A nonprofit promoting local artists and cultural heritage."
     },
     {
@@ -50,7 +50,7 @@
         "phone": "+223 777 888 999",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo6.jpg",
-        "membership": 1,
+        "membership": "gold",
         "description": "Outdoor and camping equipment for nomads, travelers, and explorers."
     },
     {
@@ -59,7 +59,7 @@
         "phone": "+223 444 555 666",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
         "image": "../images/logo7.jpg",
-        "membership": 3,
+        "membership": "platinum",
         "description": "Financial services firm helping small businesses thrive in the region."
     }
 ]
