@@ -4,7 +4,7 @@
         "address": "123 Desert Lane, Timbuktu",
         "phone": "+223 123 456 789",
         "website": "https://www.churchofjesuschrist.org/?lang=eng",
-        "image": "../images/logo1.jpg",
+        "image": "images/logo1.jpg",
         "membership": "silver",
         "description": "Leading supplier of traditional and modern textiles across West Africa."
     },
