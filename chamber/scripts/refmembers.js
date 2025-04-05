@@ -6,7 +6,7 @@ fetch("https://edwardsekirangi.github.io/wdd231/chamber/members.json")
       ["gold", "silver"].includes(member.membership.toLowerCase())
     );
 
-    // Shuffle array
+    // Shuffle the array
     for (let i = eligibleMembers.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [eligibleMembers[i], eligibleMembers[j]] = [eligibleMembers[j], eligibleMembers[i]];
@@ -18,7 +18,7 @@ fetch("https://edwardsekirangi.github.io/wdd231/chamber/members.json")
     // Get the spotlight container
     const spotlightContainer = document.getElementById("spotlight-cards");
 
-    // Create cards
+    // Create and append each card
     selected.forEach(member => {
       const card = document.createElement("div");
       card.classList.add("card");
