@@ -350,6 +350,11 @@ ul .current-menu-item {
     margin: 10px auto;
 }
 
+/* business spotlights heading */
+#second-spot{
+    padding: 1rem;
+}
+
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
