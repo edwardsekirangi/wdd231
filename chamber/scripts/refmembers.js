@@ -1,39 +1,63 @@
-fetch("https://edwardsekirangi.github.io/wdd231/chamber/members.json")
-  .then(response => response.json())
-  .then(data => {
-    // Filter for gold or silver members (case-insensitive)
-    const eligibleMembers = data.filter(member =>
-      ["gold", "silver"].includes(member.membership.toLowerCase())
-    );
+//In this script, we will use fetch API and the async functions
+//to populate an array and display it on the website
 
-    // Shuffle the array
-    for (let i = eligibleMembers.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [eligibleMembers[i], eligibleMembers[j]] = [eligibleMembers[j], eligibleMembers[i]];
-    }
+//We are getting references to the items we need to work with that are in our HTML
+const url = "https://edwardsekirangi.github.io/wdd231/chamber/members.json";
+const membersContainer = document.getElementById("members-container2");
+const gridBtn = document.getElementById("grid-view");
+const listBtn = document.getElementById("list-view");
 
-    // Pick up to 3 members
-    const selected = eligibleMembers.slice(0, 3);
+console.log("I love batman");
+//async function to fetch the members of the json file
+async function fetchMembers() {
+    //We will later use a try catch error incase of any misherps
+    
+    const response = await fetch(url);
 
-    // Get the spotlight container
-    const spotlightContainer = document.getElementById("spotlight-cards");
+    //We now have the response, we wanna get the data after we have fetched the promise status 
+    const members = await response.json();
 
-    // Create and append each card
-    selected.forEach(member => {
-      const card = document.createElement("div");
-      card.classList.add("card");
+    displayMembers(members);
+        
+}
 
-      card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} logo">
-        <h3>${member.name}</h3>
-        <p class="description">${member.description}</p>
-        <p><strong>Phone:</strong> ${member.phone}</p>
+//We will now create a function called display members that will display the members
+const displayMembers = (members) => {
+    //Create a for loop to iterate through the items
+    membersContainer.innerHTML = ''; // Clear previous content
+
+    members.forEach((member) => {
+        //We are now most likely gonna start adding elements to add into the HTML file here in the div element
+       
+        const card = document.createElement("div");
+        card.classList.add("member-card"); // Add class to card
+        
+        //Add member details to the card
+        card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} logo" />
+        <h2>${member.name}</h2>
         <p><strong>Address:</strong> ${member.address}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-        <p class="membership">${member.membership.charAt(0).toUpperCase() + member.membership.slice(1)} Member</p>
-      `;
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+        <p><strong>Membership Level:</strong> ${["Member", "Silver", "Gold"][member.membership - 1]}</p>
+        <p>${member.description}</p>
+      `; 
+        
+        membersContainer.appendChild(card);
+    });        
+}
 
-      spotlightContainer.appendChild(card);
-    });
-  })
-  .catch(error => console.error("Error loading member spotlights:", error));
+// Toggle view between grid and list
+gridBtn.addEventListener("click", () => {
+    membersContainer.classList.remove("list-view");
+    membersContainer.classList.add("grid-view");
+});
+  
+  listBtn.addEventListener("click", () => {
+    membersContainer.classList.remove("grid-view");
+    membersContainer.classList.add("list-view");
+});
+
+
+//A call to the function here at the bottom
+fetchMembers();

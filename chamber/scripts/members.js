@@ -3,7 +3,7 @@
 
 //We are getting references to the items we need to work with that are in our HTML
 const url = "https://edwardsekirangi.github.io/wdd231/chamber/members.json";
-const membersContainer = document.querySelector(".members-container");
+const membersContainer = document.getElementById("members-container");
 const gridBtn = document.getElementById("grid-view");
 const listBtn = document.getElementById("list-view");
 
