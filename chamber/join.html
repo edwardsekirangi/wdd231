@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chamber of Commerce directory page">
@@ -24,19 +24,18 @@
     <!-- JavaScript (using defer) Check the tags cuz  -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/refmembers.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <title>Chamber of commerce Join Page</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="images/favicon.png" alt="Logo" width="100">
-            <h1>Chamber of Commerce Join Page</h1>
+            <h1>UG Commerce</h1>
         </div>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="chamber/index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li class="current-menu-item"><a href="join.html">Membership</a></li>
@@ -45,143 +44,144 @@
             <div class="hamburger" id="hamburger"></div>
         </nav>
     </header>  
-    <main>
-        <body>
-            <form method="get" action="thankyou.html">
+   
+        <main class="join-flex">
+            <form method="GET" action="thankyou.html" class="join-flex1">
 
-            <fieldset class="label-1">
-                <label>
-                    First Name:
-                    <input type="text" name="firstname" title="Enter your first name" autocomplete="given-name" required />
-                </label>
+                <fieldset class="label-1">
+                    <label>
+                        First Name:
+                        <input type="text" id="firstname" name="firstname" title="Enter your first name" autocomplete="given-name" required />
+                    </label>
                 
-                <label>
-                    Last Name:
-                    <input type="text" name="lastname" title="Enter your last name" autocomplete="family-name" required />
-                </label>
+                    <label>
+                        Last Name:
+                        <input type="text" id="lastname" name="lastname" title="Enter your last name" autocomplete="family-name" required />
+                    </label>
 
-            </fieldset>
+                </fieldset>
                
-            <fieldset>
-                <label>
-                    Title:
-                    <input type="text" name="orgtitle" title="Your role in the organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
-                </label>
-            </fieldset>
+                <fieldset>
+                    <label>
+                        Title:
+                        <input type="text" id="orgtitle" name="orgtitle" title="Your role in the organization" autocomplete="organization-title"/>
+                    </label>
+                </fieldset>
            
-            <fieldset>
-                <label>
-                    Email:
-                    <input type="email" name="email" title="Your email address" autocomplete="email" placeholder="example@domain.com" required />
-                </label>
+                <fieldset>
+                    <label>
+                        Email:
+                        <input type="email" id="email" name="email" title="Your email address" autocomplete="email" placeholder="example@domain.com" required />
+                    </label>
 
-                <label>
-                    Mobile Phone:
-                    <input type="tel" name="phone" title="Your phone number" autocomplete="tel" required />
-                </label>
-            </fieldset>
+                    <label>
+                        Mobile Phone:
+                        <input type="tel" id="phone" name="phone" title="Your phone number" autocomplete="tel" required />
+                    </label>
+                </fieldset>
             
-            <fieldset>
-                <label>
-                    Organization Name:
-                    <input type="text" name="organization" title="Organization or business name" autocomplete="organization" required />
-                </label>
-                <label>
-                    Membership Level:
-                    <select name="membership" title="Select a membership level" required>
-                      <option value="">-- Select Level --</option>
-                      <option value="NP">NP Membership</option>
-                      <option value="Bronze">Bronze</option>
-                      <option value="Silver">Silver</option>
-                      <option value="Gold">Gold</option>
-                    </select>
-                </label>
-            </fieldset>
+                <fieldset>
+                    <label>
+                        Organization Name:
+                        <input type="text" id="organization" name="organization" title="Organization or business name" autocomplete="organization" required />
+                    </label>
+                    <label>
+                        Membership Level:
+                        <select name="membership" id="membership" title="Select a membership level" required>
+                            <option value="">-- Select Level --</option>
+                            <option value="NP">NP Membership</option>
+                            <option value="Bronze">Bronze</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                        </select>
+                    </label>
+                </fieldset>
 
-            <fieldset>
-                <label>
-                    Organization Description:
-                    <textarea name="description" title="Describe your organization"></textarea>
-                </label>
-            </fieldset>
-
-            
-              <input type="hidden" name="timestamp" id="timestamp" />
-              <input type="submit" value="Submit Membership Request" />
+                <fieldset>
+                    <label>
+                        Organization Description:
+                        <textarea id="description" name="description" title="Describe your organization"></textarea>
+                    </label>
+                </fieldset>
+           
+                    <input type="hidden" name="timestamp" id="timestamp" />
+                    <input type="submit" id="submit-btn"value="Submit Membership Request" />
             </form>
-          
-            <div class="cards">
-                <div class="card">
-                    <h3>NP Membership</h3>
-                    <p>No cost. For non-profit organizations.</p>
-                    <a href="#" onclick="openModal('modal-np')">View Benefits</a>
-                </div>
-                <div class="card">
-                    <h3>Bronze Membership</h3>
-                    <p>Basic advertising and event access.</p>
-                    <a href="#" onclick="openModal('modal-bronze')">View Benefits</a>
-                </div>
-                <div class="card">
-                    <h3>Silver Membership</h3>
-                    <p>Priority event access, spotlights, and training.</p>
-                    <a href="#" onclick="openModal('modal-silver')">View Benefits</a>
-                </div>
-                <div class="card">
-                    <h3>Gold Membership</h3>
-                    <p>Top-tier visibility and exclusive perks.</p>
-                    <a href="#" onclick="openModal('modal-gold')">View Benefits</a>
-                </div>
-            </div>
-          
-            <!-- Modals -->
-            <div class="modal" id="modal-np">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal-np')">&times;</span>
-                    <h3>NP Membership Benefits</h3>
-                <ul>
-                    <li>No cost</li>
-                    <li>Access to community events</li>
-                    <li>Basic directory listing</li>
-                </ul>
-                </div>
-            </div>
-            <div class="modal" id="modal-bronze">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
-                    <h3>Bronze Membership Benefits</h3>
+
+            <div class="join-flex2">
+                <section class="cards">
+                    <div class="card">
+                        <h3>NP Membership</h3>
+                        <p>No cost. For non-profit organizations.</p>
+                        <a href="#" onclick="openModal('modal-np')">View Benefits</a>
+                    </div>
+                    <div class="card">
+                        <h3>Bronze Membership</h3>
+                        <p>Basic advertising and event access.</p>
+                        <a href="#" onclick="openModal('modal-bronze')">View Benefits</a>
+                    </div>
+                    <div class="card">
+                        <h3>Silver Membership</h3>
+                        <p>Priority event access, spotlights, and training.</p>
+                        <a href="#" onclick="openModal('modal-silver')">View Benefits</a>
+                    </div>
+                    <div class="card">
+                        <h3>Gold Membership</h3>
+                        <p>Top-tier visibility and exclusive perks.</p>
+                        <a href="#" onclick="openModal('modal-gold')">View Benefits</a>
+                    </div>
+                </section>
+              
+                <!-- Modals -->
+                <section class="modal" id="modal-np">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal-np')">&times;</span>
+                        <h3>NP Membership Benefits</h3>
                     <ul>
-                        <li>Website listing</li>
-                        <li>Access to member-only events</li>
-                        <li>Quarterly newsletter</li>
+                        <li>No cost</li>
+                        <li>Access to community events</li>
+                        <li>Basic directory listing</li>
                     </ul>
-                </div>
+                    </div>
+                </section>
+                <section class="modal" id="modal-bronze">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+                        <h3>Bronze Membership Benefits</h3>
+                        <ul>
+                            <li>Website listing</li>
+                            <li>Access to member-only events</li>
+                            <li>Quarterly newsletter</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="modal" id="modal-silver">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+                        <h3>Silver Membership Benefits</h3>
+                        <ul>
+                            <li>All Bronze benefits</li>
+                            <li>Homepage spotlight</li>
+                            <li>Free workshop access</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="modal" id="modal-gold">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+                        <h3>Gold Membership Benefits</h3>
+                        <ul>
+                            <li>All Silver benefits</li>
+                            <li>Exclusive event invites</li>
+                            <li>Front-page advertising</li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-            <div class="modal" id="modal-silver">
-              <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-silver')">&times;</span>
-                <h3>Silver Membership Benefits</h3>
-                <ul>
-                  <li>All Bronze benefits</li>
-                  <li>Homepage spotlight</li>
-                  <li>Free workshop access</li>
-                </ul>
-              </div>
-            </div>
-            <div class="modal" id="modal-gold">
-              <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-gold')">&times;</span>
-                <h3>Gold Membership Benefits</h3>
-                <ul>
-                  <li>All Silver benefits</li>
-                  <li>Exclusive event invites</li>
-                  <li>Front-page advertising</li>
-                </ul>
-              </div>
-            </div>
-    </main> 
-    <footer>
-        <p class="small-name">&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
-        <p id="lastModified"></p>   
-    </footer>
+        </main> 
+        <footer>
+            <p class="small-name">&copy; <span id="currentyear"></span>🦇 Sekirangi Edward 🦇, Uganda Kampala</p>
+            <p id="lastModified"></p>   
+        </footer>
 </body>
 </html>
