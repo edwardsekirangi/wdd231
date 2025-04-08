@@ -136,7 +136,13 @@ nav a:hover {
 .course-card {
     border: 1px solid #ccc;
     padding: 1em;
+    background-color: rgb(242, 242, 242);
+}
 
+.course-card:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    background-color: rgb(221, 221, 221);
 }
 
 /* Responsive Navigation */
@@ -354,6 +360,95 @@ ul .current-menu-item {
 #second-spot{
     padding: 1rem;
 }
+
+/* ???????? DIALOG ???????? */
+/* Dialog box animation */
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    border: 1px solid rgb(0 0 0 / 0.2);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Keyframe for the fade-in and scale-up animation */
+@keyframes showDialog {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 1;
+    }
+}
+
+/* Add the animation when the dialog is shown */
+dialog.show {
+    animation: showDialog 0.5s ease forwards;
+}
+
+/* Backdrop styling */
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeBackdrop 0.5s ease forwards;
+}
+
+/* Keyframe for the fade-in effect on the backdrop */
+@keyframes fadeBackdrop {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Button styling */
+dialog button {
+    bottom: 10px;
+    position: absolute;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+/* Closing transition */
+dialog.close {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+}
+
+
+#butn-heading{
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+
+#courseFilters{
+    padding: 1rem;
+}
+#all-btn{
+    background-color: rgb(231, 231, 231);
+    padding: .5rem;
+}
+#wdd-btn{
+    background-color: rgb(231, 231, 231);
+    padding: .5rem;
+}
+#cse-btn{
+    background-color: rgb(231, 231, 231);
+    padding: .5rem;
+}
+
 
 @media screen and (max-width: 768px) {
     .nav-links {

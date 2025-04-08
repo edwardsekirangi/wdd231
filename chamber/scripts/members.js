@@ -51,13 +51,12 @@ const displayMembers = (members) => {
 gridBtn.addEventListener("click", () => {
     membersContainer.classList.remove("list-view");
     membersContainer.classList.add("grid-view");
-  });
+});
   
-  listBtn.addEventListener("click", () => {
+listBtn.addEventListener("click", () => {
     membersContainer.classList.remove("grid-view");
     membersContainer.classList.add("list-view");
-  });
-
+});
 
 //A call to the function here at the bottom
 fetchMembers();
