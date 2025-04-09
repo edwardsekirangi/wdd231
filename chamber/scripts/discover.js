@@ -29,7 +29,7 @@ const displayMembers = (members) => {
         //We are now most likely gonna start adding elements to add into the HTML file here in the div element
        
         const card = document.createElement("div");
-        card.classList.add("member-card"); // Add class to card
+        card.classList.add("member-case"); // Add class to card
         
         //Add member details to the card
         card.innerHTML = `
