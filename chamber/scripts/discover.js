@@ -3,7 +3,7 @@
 
 //We are getting references to the items we need to work with that are in our HTML
 const url = "https://edwardsekirangi.github.io/wdd231/chamber/data/discover.json";
-const membersContainer = document.getElementById("second-card");
+const itemsContainer = document.getElementById("second-card");
 
 console.log("I love batman");
 //async function to fetch the members of the json file
@@ -13,16 +13,16 @@ async function fetchMembers() {
     const response = await fetch(url);
 
     //We now have the response, we wanna get the data after we have fetched the promise status 
-    const members = await response.json();
+    const items = await response.json();
 
-    displayMembers(members);
+    displayMembers(items);
         
 }
 
 //We will now create a function called display members that will display the members
-const displayMembers = (members) => {
+const displayMembers = (items) => {
     //Create a for loop to iterate through the items
-    membersContainer.innerHTML = ''; // Clear previous content
+    itemsContainer.innerHTML = ''; // Clear previous content
 
     members.forEach((member) => {
         //We are now most likely gonna start adding elements to add into the HTML file here in the div element
@@ -41,7 +41,7 @@ const displayMembers = (members) => {
         <p>${member.description}</p>
       `; 
         
-        membersContainer.appendChild(card);
+        itemsContainer.appendChild(card);
     });        
 }
 
