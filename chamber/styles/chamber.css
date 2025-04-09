@@ -593,10 +593,26 @@ fieldset{
 }
 .member-case p{
     padding: .3rem;
+    margin-bottom: 10px;
 }
 .member-case:hover{
     transform: scale(1.02);
     
+}
+.learn-more{
+    text-decoration: none;
+    padding: .2rem;
+    background-color: rgb(227, 227, 227);
+    border-radius: 2px;
+    border: 1px solid rgb( 0 0 0 / 0.2);
+}
+.learn-more:hover{
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+.visit-message{
+    padding: 1rem;
+    background-color: rgb(226, 226, 0);
 }
 @keyframes items-case {
     to { opacity: 1; transform: translateY(0); }

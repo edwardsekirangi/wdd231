@@ -33,15 +33,15 @@ const displayMembers = (members) => {
         
         //Add member details to the card
         card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.title} logo" />
+        <img src="images/${member.image}" loading="lazy" alt="${member.title} logo" />
         <h2>${member.title}</h2>
         <p><strong>Address:</strong> ${member.address}</p>
         <p>${member.description}</p>
+        <a href="https://utb.go.ug/" class="learn-more" target = "blank">Learn more</button>
       `; 
         
         membersContainer.appendChild(card);
     });        
 }
-
 //A call to the function here at the bottom
 fetchMembers();
