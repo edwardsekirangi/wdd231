@@ -31,7 +31,7 @@ const displayMembers = (members) => {
         
         //Add member details to the card
         card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} logo" width="350"/>
+        <img src="images/${member.image}" alt="${member.name} logo" width="350" loading="lazy"/>
         <h2>${member.title}</h2>
         <p>${member.description}</p>
       `; 
