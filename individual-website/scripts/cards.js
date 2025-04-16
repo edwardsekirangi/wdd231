@@ -1,27 +1,46 @@
-const programs = [
-    { title: "Mentorship Program", description: "Pairing students with academic mentors." },
-    { title: "Scholarship Assistance", description: "Helping students apply for educational funding." },
-    { title: "Weekend Workshops", description: "Hands-on sessions on coding, writing, and more." }
-];
+//In this script, we will use fetch API and the async functions
+//to populate an array and display it on the website
 
-const events = [
-    { title: "Spring Fundraiser", date: "May 10, 2025" },
-    { title: "College Prep Bootcamp", date: "June 1, 2025" },
-    { title: "Volunteer Meetup", date: "July 15, 2025" }
-];
+//We are getting references to the items we need to work with that are in our HTML
+const url = "https://edwardsekirangi.github.io/wdd231/individual-website/data/program.json";
+const membersContainer = document.getElementById("programCards");
 
-const programsContainer = document.querySelector('.programs-container');
-programs.forEach(prog => {
-    const div = document.createElement('div');
-    div.classList.add('program');
-    div.innerHTML = `<h3>${prog.title}</h3><p>${prog.description}</p>`;
-    programsContainer.appendChild(div);
-});
+console.log("I love batman");
+//async function to fetch the members of the json file
+async function fetchMembers() {
+    //We will later use a try catch error incase of any misherps
+    
+    const response = await fetch(url);
 
-const eventsContainer = document.querySelector('.events-container');
-events.forEach(evt => {
-    const div = document.createElement('div');
-    div.classList.add('event');
-    div.innerHTML = `<h3>${evt.title}</h3><p>${evt.date}</p>`;
-    eventsContainer.appendChild(div);
-});
+    //We now have the response, we wanna get the data after we have fetched the promise status 
+    const members = await response.json();
+
+    displayMembers(members);
+        
+}
+
+//We will now create a function called display members that will display the members
+const displayMembers = (members) => {
+    //Create a for loop to iterate through the items
+    membersContainer.innerHTML = ''; // Clear previous content
+
+    members.forEach((member) => {
+        //We are now most likely gonna start adding elements to add into the HTML file here in the div element
+       
+        const card = document.createElement("div");
+        card.classList.add("program-card"); // Add class to card
+        
+        //Add member details to the card
+        card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} logo" />
+        <h2>${member.title}</h2>
+        <p>${member.description}</p>
+      `; 
+        
+        membersContainer.appendChild(card);
+    });        
+}
+
+
+//A call to the function here at the bottom
+fetchMembers();
