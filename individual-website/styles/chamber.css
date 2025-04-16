@@ -27,13 +27,6 @@ header {
     margin-left: 20px;
 }
 
-.eading {
-    background-color: #d6d6d6;
-    text-align: center;
-    margin-top: 0;
-}
-
-
 /* Navigation styling using CSS Grid */
 nav ul {
     list-style: none;
@@ -77,6 +70,8 @@ nav a:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
+    animation: fadeInZoom 1s ease-out forwards;
+    opacity: 0;
     /* Ensures the image covers the area without stretching */
 }
 .hero h2{
@@ -119,93 +114,33 @@ nav a:hover {
 .hero-button:hover {
     background-color: #d97904;
     transform: scale(1.05);
- }
+}
+
+/* Animating the fero images */
+@keyframes fadeInZoom {
+    0% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
 
 #companies-heading{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     font-size: 2rem;
-    margin-left: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    background-color: rgba(255, 243, 200, 0.5);
 }
 
-#ug-comm{
-    color: #d9d9d9;
-    background-color: black;
-    padding: 0;
-    margin: 0;
-    padding-right: 1rem;
-    text-align: end;
-}
-
-/* Index page!!!!!!!!!!!!!!*/
-
-/* Navigation Styles */
-.index-nav ul {
-    /* background-color: red; */
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-left: 6rem;
-    font-size: 2rem;
-}
-
-.index-nav ul li {
-    margin-right: 1em;
-    padding: 5px;
-}
-
-.index-nav ul li a {
-    text-decoration: none;
-
-}
-
-#course-heading {
-    text-align: end;
-    text-align: center;
-    margin-left: 50%;
-}
-
-/* Course Card Styles */
 .course-card {
     border: 1px solid #ccc;
     padding: 1em;
     background-color: rgb(242, 242, 242);
 }
 
-.course-card:hover{
-    transform: scale(1.02);
-    cursor: pointer;
-    background-color: rgb(221, 221, 221);
-}
-
-/* Responsive Navigation */
-
-.grid-img {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.grid-img h2 {
-    padding: .5rem;
-    border: 1px solid rgb(0 0 0/ 0.4);
-    width: 383px;
-    text-align: center;
-    background-color: #d6d6d6;
-    border-radius: 10px 10px 0 0;
-}
-
-.section-div {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-
-}
-
-.section-des {
-    order: -1;
-    margin-top: 34px;
-}
 
 
 footer {
@@ -256,279 +191,14 @@ footer {
     color: white;
 }
 
-/* The code for the buttons in directory page */
-
-.view-toggle button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #000000;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-  
-.view-toggle button:hover {
-    background-color: #950101;
-}
-  
-#members-container {
-    margin-top: 20px;
-    display: grid;
-    gap: 20px;
-}
-  
-  /* Grid view: multiple columns */
-.grid-view {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-  
-  /* List view: single column */
-.list-view {
-    grid-template-columns: 1fr;
-}
-  
-.member-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-  
-.member-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-  
-.member-card h2 {
-    margin-top: 0;
-}
-  
-.member-card a {
-    color: #000dff;
-    text-decoration: none;
-}
-  
-.member-card a:hover {
-    text-decoration: underline;
-}
-
-/* Here is lies the code for the home commerce page */
-.cta {
-    padding: 1rem;
-}
-.btn:hover{
-    background-color: #6b0000;
-}
-  
-.btn {
-    background-color: #3D0000;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    color: #d9d9d9;
-    border-radius: 8px;
-}
-
-/* Current Events*/
-.current-events {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-.current-events h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.current-events {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.event {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.event h3 {
-    font-size: 1.5em;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.event p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.event-link {
-    display: inline-block;
-    color: #0078D4;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.event-link:hover {
-    color: #005fa3;
-}
-
-/* Weather card design */
-.weather-card{
-    background-color: rgb(244, 244, 244);
-    border-radius: 10px;
-    text-align: center;
-    width: 400px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-.weather-card h2 {
-    margin: 0;
-    font-size: 24px;
-}
-.weather-card #temperature {
-    font-size: 48px;
-    color: #ff5733;
-}
-.weather-card #description {
-    margin: 10px 0;
-    font-size: 18px;
-    
-}
-.weather-card img {
-    width: 100px;
-    margin: 10px auto;
-}
-
-/* business spotlights heading */
-#second-spot{
-    padding: 1rem;
-}
-
-/* ???????? DIALOG ???????? */
-/* Dialog box animation */
-dialog {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    border: 1px solid rgb(0 0 0 / 0.2);
-    border-radius: .25rem;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #777;
-    width: 90%;
-    max-width: 600px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Keyframe for the fade-in and scale-up animation */
-@keyframes showDialog {
-    0% {
-        transform: translate(-50%, -50%) scale(0.2);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(2);
-        opacity: 1;
-    }
-}
-
-/* Add the animation when the dialog is shown */
-dialog.show {
-    animation: showDialog 0.5s ease forwards;
-}
-
-/* Backdrop styling */
-::backdrop {
-    background-color: rgba(0, 0, 0, 0.9);
-    animation: fadeBackdrop 0.5s ease forwards;
-}
-
-/* Keyframe for the fade-in effect on the backdrop */
-@keyframes fadeBackdrop {
-    0% {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    100% {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-}
-
-/* Button styling */
-dialog button {
-    bottom: 10px;
-    position: absolute;
-    right: 23px;
-    padding: .5rem 1rem;
-    border: 1px solid rgb(0 0 0 / 0.1);
-}
-
-/* Closing transition */
-dialog.close {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9);
-    pointer-events: none;
-}
-
-
-#butn-heading{
-    padding: 1rem;
-    margin-bottom: 10px;
-}
-
-#courseFilters{
-    padding: 1rem;
-}
-#all-btn{
-    background-color: rgb(231, 231, 231);
-    padding: .5rem;
-}
-#wdd-btn{
-    background-color: rgb(231, 231, 231);
-    padding: .5rem;
-}
-#cse-btn{
-    background-color: rgb(231, 231, 231);
-    padding: .5rem;
-}
-
-/* ?????? JOIN PAGE ?????? */
-
-.join-flex{
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.join-flex1{
-    background-color: rgb(233, 233, 233);
-    width: 50%;
-    padding: 1rem;
-}
-.join-flex2{
-    padding: 1rem;
-}
 .section {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     background-color: white;
     margin: 2rem auto;
     max-width: 1200px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
 }
 
 .section h2 {
@@ -572,8 +242,7 @@ form button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin-top:30px;
-    background-color: yellow;
+    background-color: rgba(255, 200, 0, 0.1);
 }
 .card {
     background: #f2f2f2;
@@ -582,9 +251,13 @@ form button:hover {
     margin-top: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     animation: fadeIn 0.6s ease forwards;
+    background-color: rgba(255, 243, 200, 0.1);
     opacity: 0;
-    background-color: orange;
-
+    place-items: center;
+}
+.card:hover{
+    background-color: rgba(243, 156, 18, 0.1);
+    cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -648,43 +321,7 @@ form button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.member-case {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);   
-    animation: items-case 0.5s ease backwards;
-}
-  
-.member-case img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-  
-.member-case h2 {
-    margin-top: 0;
-}
-.member-case p{
-    padding: .3rem;
-    margin-bottom: 10px;
-}
-.member-case:hover{
-    transform: scale(1.02);
-    
-}
-.learn-more{
-    text-decoration: none;
-    padding: .2rem;
-    background-color: rgb(227, 227, 227);
-    border-radius: 2px;
-    border: 1px solid rgb( 0 0 0 / 0.2);
-}
-.learn-more:hover{
-    background-color: rgb(58, 58, 58);
-    color: white;
-}
+
 .visit-message{
     padding: 1rem;
     background-color: rgb(226, 226, 0);
@@ -694,6 +331,56 @@ form button:hover {
     from { opacity: 0; transform: translateY(100px); }
 }
 
+/* SUCCESS STORIES MENU */
+.success-stories {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+  
+.success-stories h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+  
+.stories-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.story-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+  
+.story-card:hover {
+    transform: translateY(-5px);
+}
+  
+.story-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+  
+.story-card h3 {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+  
+.story-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+  
 /* SMALL SCREENS */
 @media screen and (max-width: 640px) {
     /* Hamburger menu */
@@ -809,6 +496,12 @@ form button:hover {
         padding: 10px;
         margin: 0;
     }
+    .cards{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    
     
 
 }
@@ -852,6 +545,12 @@ form button:hover {
         top: 59%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .cards{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
     }
     
 
