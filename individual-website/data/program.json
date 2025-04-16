@@ -2,17 +2,17 @@
     {
       "title": "Mentorship Program",
       "description": "Connect students with mentors who guide them academically and professionally.",
-      "image": "images/mentorship.jpg"
+      "image": "../images/img5.jpg"
     },
     {
       "title": "Scholarship Help",
       "description": "Workshops and resources to help students find and apply for scholarships.",
-      "image": "images/scholarship.jpg"
+      "image": "../images/img4.jpg"
     },
     {
-      "title": "Coding Bootcamp",
-      "description": "Introductory coding and technology classes for youth.",
-      "image": "images/coding.jpg"
+      "title": "Tailoring Bootcamp",
+      "description": "Introductory Tailoring classes for youth.",
+      "image": "../images/img2.jpg"
     },
     {
       "title": "Creative Writing",
@@ -22,7 +22,7 @@
     {
       "title": "College Prep",
       "description": "Guidance on applications, essays, and test prep.",
-      "image": "images/college.jpg"
+      "image": "../images/img3.jpg"
     }
 ]
   
