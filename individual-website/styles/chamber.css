@@ -1,0 +1,856 @@
+/* We are setting everything to 0 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Winky Sans", sans-serif;
+    color: #313030;
+}
+
+/* The header */
+header {
+    display: grid;
+    grid-template-columns: 4fr 3fr 2fr;
+    align-items: center;
+    background-color: #182c3f;
+    color: #d9d9d9;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* header styling on index page */
+
+
+.the-name {
+    font-size: 2.5rem;
+    font-family: "DM Serif Text", serif;
+    color: #d9d9d9;
+    margin-left: 20px;
+}
+
+.eading {
+    background-color: #d6d6d6;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+/* Navigation styling using CSS Grid */
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: end;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d9d9d9;
+    font-size: 1.5rem;
+    transition: color 0.2s ease;
+    padding: 1rem;
+}
+
+.current-menu-item {
+    text-decoration:underline;
+    text-decoration-color: #F39C12; /* Change the underline color */
+    text-decoration-thickness: 2px; /* Thicker line */
+    text-underline-offset: 4px;     /* Space between text and underline */
+
+}
+
+nav a:hover {
+    color: #F39C12
+}
+
+.hero {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+}
+.hero h2{
+    width: 70rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.7);  /* Change as needed */
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+    /* padding: 0.5em; */
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 8px;
+
+}
+.button-group{
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F39C12; /* Your secondary color */
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-right: 1rem;
+}
+
+.hero-button:hover {
+    background-color: #d97904;
+    transform: scale(1.05);
+ }
+
+#companies-heading{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+#ug-comm{
+    color: #d9d9d9;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    padding-right: 1rem;
+    text-align: end;
+}
+
+/* Index page!!!!!!!!!!!!!!*/
+
+/* Navigation Styles */
+.index-nav ul {
+    /* background-color: red; */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 6rem;
+    font-size: 2rem;
+}
+
+.index-nav ul li {
+    margin-right: 1em;
+    padding: 5px;
+}
+
+.index-nav ul li a {
+    text-decoration: none;
+
+}
+
+#course-heading {
+    text-align: end;
+    text-align: center;
+    margin-left: 50%;
+}
+
+/* Course Card Styles */
+.course-card {
+    border: 1px solid #ccc;
+    padding: 1em;
+    background-color: rgb(242, 242, 242);
+}
+
+.course-card:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    background-color: rgb(221, 221, 221);
+}
+
+/* Responsive Navigation */
+
+.grid-img {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.grid-img h2 {
+    padding: .5rem;
+    border: 1px solid rgb(0 0 0/ 0.4);
+    width: 383px;
+    text-align: center;
+    background-color: #d6d6d6;
+    border-radius: 10px 10px 0 0;
+}
+
+.section-div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+}
+
+.section-des {
+    order: -1;
+    margin-top: 34px;
+}
+
+
+footer {
+    background-color: #182c3f;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+  
+#social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3fa2ff;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+  
+#social-icons a:hover {
+    background-color: #F39C12; /* Secondary color */
+    transform: scale(1.1);
+}
+  
+
+.small-name {
+    color: white;
+}
+
+/* Code for the hamburger menus */
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* The code for the buttons in directory page */
+
+.view-toggle button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.view-toggle button:hover {
+    background-color: #950101;
+}
+  
+#members-container {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+  
+  /* Grid view: multiple columns */
+.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+  
+  /* List view: single column */
+.list-view {
+    grid-template-columns: 1fr;
+}
+  
+.member-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+  
+.member-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+  
+.member-card h2 {
+    margin-top: 0;
+}
+  
+.member-card a {
+    color: #000dff;
+    text-decoration: none;
+}
+  
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+/* Here is lies the code for the home commerce page */
+.cta {
+    padding: 1rem;
+}
+.btn:hover{
+    background-color: #6b0000;
+}
+  
+.btn {
+    background-color: #3D0000;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #d9d9d9;
+    border-radius: 8px;
+}
+
+/* Current Events*/
+.current-events {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.current-events h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.current-events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.event-link {
+    display: inline-block;
+    color: #0078D4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.event-link:hover {
+    color: #005fa3;
+}
+
+/* Weather card design */
+.weather-card{
+    background-color: rgb(244, 244, 244);
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.weather-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.weather-card #temperature {
+    font-size: 48px;
+    color: #ff5733;
+}
+.weather-card #description {
+    margin: 10px 0;
+    font-size: 18px;
+    
+}
+.weather-card img {
+    width: 100px;
+    margin: 10px auto;
+}
+
+/* business spotlights heading */
+#second-spot{
+    padding: 1rem;
+}
+
+/* ???????? DIALOG ???????? */
+/* Dialog box animation */
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    border: 1px solid rgb(0 0 0 / 0.2);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Keyframe for the fade-in and scale-up animation */
+@keyframes showDialog {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 1;
+    }
+}
+
+/* Add the animation when the dialog is shown */
+dialog.show {
+    animation: showDialog 0.5s ease forwards;
+}
+
+/* Backdrop styling */
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeBackdrop 0.5s ease forwards;
+}
+
+/* Keyframe for the fade-in effect on the backdrop */
+@keyframes fadeBackdrop {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Button styling */
+dialog button {
+    bottom: 10px;
+    position: absolute;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+/* Closing transition */
+dialog.close {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+}
+
+
+#butn-heading{
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+
+#courseFilters{
+    padding: 1rem;
+}
+#all-btn{
+    background-color: rgb(231, 231, 231);
+    padding: .5rem;
+}
+#wdd-btn{
+    background-color: rgb(231, 231, 231);
+    padding: .5rem;
+}
+#cse-btn{
+    background-color: rgb(231, 231, 231);
+    padding: .5rem;
+}
+
+/* ?????? JOIN PAGE ?????? */
+
+.join-flex{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.join-flex1{
+    background-color: rgb(233, 233, 233);
+    width: 50%;
+    padding: 1rem;
+}
+.join-flex2{
+    padding: 1rem;
+}
+.section {
+    padding: 4rem 2rem;
+    background-color: white;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2C3E50;
+}
+
+.program, .event {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-left: 5px solid #F39C12;
+    border-radius: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1a252f;
+}
+
+.cards {
+    flex: 1 1 300px;
+    display: grid;
+    gap: 1rem;
+    margin-top:30px;
+}
+.card {
+    background: #f2f2f2;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,0.7);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+@keyframes modalbg{
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.close {
+    float: right;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Chamber thank you page design */
+
+.info {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.info p {
+    margin: 0.5rem 0;
+}
+
+/* ????? discover designs????? */
+#second-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.member-case {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);   
+    animation: items-case 0.5s ease backwards;
+}
+  
+.member-case img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+  
+.member-case h2 {
+    margin-top: 0;
+}
+.member-case p{
+    padding: .3rem;
+    margin-bottom: 10px;
+}
+.member-case:hover{
+    transform: scale(1.02);
+    
+}
+.learn-more{
+    text-decoration: none;
+    padding: .2rem;
+    background-color: rgb(227, 227, 227);
+    border-radius: 2px;
+    border: 1px solid rgb( 0 0 0 / 0.2);
+}
+.learn-more:hover{
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+.visit-message{
+    padding: 1rem;
+    background-color: rgb(226, 226, 0);
+}
+@keyframes items-case {
+    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(100px); }
+}
+
+/* SMALL SCREENS */
+@media screen and (max-width: 640px) {
+    /* Hamburger menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #182c3f;
+        text-align: center;
+        z-index: 999;
+        gap: 1px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: .6rem;
+    }
+
+    .the-name {
+        font-size: 2rem;
+        font-family: "DM Serif Text", serif;
+        color: #d9d9d9;
+        margin-left: 20px;
+    }
+
+    .section-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #courses {
+        margin-top: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger::before{
+        content: "\2630";
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active::before{
+        content: "x";
+    }
+
+    /* Chamber of commerce join page */
+
+    .join-flex{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    
+    }
+    
+    .join-flex1{
+        width: 50%;
+        padding: .5rem;
+        width: auto;
+    }
+    .join-flex2{
+        padding: .5rem;
+    }
+    #second-card{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .member-case:hover{
+        transform: scale(1);
+    }
+
+    /* SMALL CHANGES */
+    nav ul li a {
+        text-decoration: none;
+        color: #d9d9d9;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+        
+    }
+    nav ul li a:hover {
+        background-color: #30577b;
+    }
+
+    .hero h2{
+        width: 20rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255, 255, 255, 0.7);  /* Change as needed */
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        /* padding: 0.5em; */
+        background-color: rgba(0, 0, 0, 0.3); /* optional: makes text more readable */
+        border-radius: 8px;
+    }
+
+    .button-group{
+        position: absolute;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -2%);
+        
+    }
+    .hero-button{
+        font-size: 1rem;
+        padding: 10px;
+        margin: 0;
+    }
+    
+
+}
+
+/* MEDIUM SCREENS */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+
+    nav ul li a {
+        text-decoration: none;
+        color: #d9d9d9;
+        font-size: 1.2rem;
+        transition: color 0.2s ease;
+        padding: 2px;
+    }
+
+    .hero h2{
+        width: 40rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        color: rgba(255, 255, 255, 0.7);  /* Change as needed */
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        /* padding: 0.5em; */
+        background-color: rgba(0, 0, 0, 0.3); /* optional: makes text more readable */
+        border-radius: 8px;
+    }
+    .hero-button{
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    margin-right: 5px;
+    font-size: 1.2rem;
+    
+
+    }
+    .button-group{
+        position: absolute;
+        top: 59%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+}

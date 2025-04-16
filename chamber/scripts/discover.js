@@ -37,7 +37,7 @@ const displayMembers = (members) => {
         <h2>${member.title}</h2>
         <p><strong>Address:</strong> ${member.address}</p>
         <p>${member.description}</p>
-        <a href="https://utb.go.ug/" class="learn-more" target = "blank">Learn more</button>
+        <a href="https://utb.go.ug/" class="learn-more" target = "blank">Learn more</a>
       `; 
         
         membersContainer.appendChild(card);

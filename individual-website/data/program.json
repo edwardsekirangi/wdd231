@@ -1,0 +1,28 @@
+[
+    {
+      "title": "Mentorship Program",
+      "description": "Connect students with mentors who guide them academically and professionally.",
+      "image": "images/mentorship.jpg"
+    },
+    {
+      "title": "Scholarship Help",
+      "description": "Workshops and resources to help students find and apply for scholarships.",
+      "image": "images/scholarship.jpg"
+    },
+    {
+      "title": "Coding Bootcamp",
+      "description": "Introductory coding and technology classes for youth.",
+      "image": "images/coding.jpg"
+    },
+    {
+      "title": "Creative Writing",
+      "description": "Enhancing communication skills through storytelling and writing.",
+      "image": "images/writing.jpg"
+    },
+    {
+      "title": "College Prep",
+      "description": "Guidance on applications, essays, and test prep.",
+      "image": "images/college.jpg"
+    }
+]
+  
