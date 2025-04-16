@@ -23,6 +23,11 @@
       "title": "College Prep",
       "description": "Guidance on applications, essays, and test prep.",
       "image": "../images/img3.jpg"
+    },
+    {
+        "title": "Art & Design Workshop",
+        "description": "Explore creativity through hands-on art and digital design sessions.",
+        "image": "../images/img6.jpg"
     }
 ]
   

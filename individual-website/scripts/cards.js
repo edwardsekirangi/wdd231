@@ -28,11 +28,11 @@ const displayMembers = (members) => {
         //We are now most likely gonna start adding elements to add into the HTML file here in the div element
        
         const card = document.createElement("div");
-        card.classList.add("program-card"); // Add class to card
+        card.classList.add("card"); // Add class to card
         
         //Add member details to the card
         card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} logo" />
+        <img src="images/${member.image}" alt="${member.name} logo" width="400"/>
         <h2>${member.title}</h2>
         <p>${member.description}</p>
       `; 
