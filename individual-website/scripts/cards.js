@@ -18,7 +18,6 @@ async function fetchMembers() {
     displayMembers(members);
         
 }
-
 //We will now create a function called display members that will display the members
 const displayMembers = (members) => {
     //Create a for loop to iterate through the items
@@ -32,7 +31,7 @@ const displayMembers = (members) => {
         
         //Add member details to the card
         card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} logo" width="350" loading="lazy"/>
+        <img src="images/${member.image}" alt="${member.name} logo" width="350"/>
         <h2>${member.title}</h2>
         <p>${member.description}</p>
       `; 
@@ -40,7 +39,6 @@ const displayMembers = (members) => {
         membersContainer.appendChild(card);
     });        
 }
-
 
 //A call to the function here at the bottom
 fetchMembers();
